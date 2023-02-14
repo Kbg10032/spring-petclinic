@@ -33,7 +33,7 @@ pipeline {
       steps {
         echo 'Docker Image'
         dir("${env.WORKSPACE}") {
-          sh 'docker build -t ${ECR_DOCKER_UNAGE}:${ECR_DOCKER_TAG} .' 
+          sh 'docker build -t ${ECR_DOCKER_IMAGE}:${ECR_DOCKER_TAG} .' 
         }
       }
     }
