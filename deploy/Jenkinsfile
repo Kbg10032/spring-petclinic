@@ -5,10 +5,10 @@ pipeline {
     jdk "JDK11"
   }
   environment {
-    AWS_CREDENTIAL_NAME = "AWSCredentials"
+    AWS_CREDENTIAL_NAME = "awsEcrCredential"
     AWS_ACCOUNT_ID= "257307634175"
     REGION = "ap-northeast-2"
-    DOCKER_IMAGE_NAME="aws11.spring-petclinic"
+    DOCKER_IMAGE_NAME="aws11-spring-petclinic"
     DOCKER_TAG="1.0"
     ECR_REPOSITORY = "${AWS_ACCOUNT_ID}.dkr.ecr.ap-northeast-2.amazonaws.com"
     ECR_DOCKER_IMAGE = "${ECR_REPOSITORY}/${DOCKER_IMAGE_NAME}"
